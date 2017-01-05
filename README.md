@@ -66,6 +66,8 @@ Each project will have a [`package.json`](resources/package.json) file, this is 
 
 ### Installing Dependencies
 
+To install dependencies you need to run the following commands from within the same directory as `package.json`.
+
 Installing new `dependencies` is done with the following command:
 
 `npm install --save packagename`
@@ -143,6 +145,14 @@ The example [`gulpfile.js`](resources/gulpfile.js) has examples of how we use El
 
 ### `webpack`
 
+To use webpack you simply need to install the `elixir` `webpack` task with the following command:
+
+`npm install --save-dev laravel-elixir-webpack-official`
+
+An example of how to run `webpack` as a task is in our starting [`gulpfile.js`](resources/gulpfile.js#L70).
+
+#### More advance `webpack` stuff...
+
 [`webpack.config.js`](resources/webpack.config.js) is used to configure `webpack` and should be placed in the root of your project. Our starting [`webpack.config.js`](resources/webpack.config.js) is specifing what the bundled output should be called and what loaders we are using. Loaders are pretty much what allow us to `require()` things in our JavaScript files.
 
 The following loaders are specified in our starting [`webpack.config.js`](resources/webpack.config.js):
@@ -150,11 +160,9 @@ The following loaders are specified in our starting [`webpack.config.js`](resour
 * `babel-loader` - This allows us to write our files in ES6 and when it is bundled it will also be compiled
 * `style-loader` - This allows us to `require()` style sheets in our JavaScript. When this is done they are injected into the page using `<style>` tags.
 
-To add `webpack` and these loaders as `devDependencies` for a given project run the following command:
+To add these loaders as `devDependencies` for a given project run the following command:
 
-`npm install --save-dev babel-core babel-loader babel-plugin-transform-object-rest-spread babel-preset-es2015 css-loader laravel-elixir-webpack-official style-loader`
-
-We are using `elixir`'s wrapper for `webpack` to run `webpack` as a task in our starting [`gulpfile.js`](resources/gulpfile.js#L70).
+`npm install --save-dev babel-core babel-loader babel-plugin-transform-object-rest-spread babel-preset-es2015 css-loader style-loader`
 
 ### Babel
 
