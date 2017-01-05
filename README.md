@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-1. [The `assets` & `dist` Folders](#1-the-assets--dist-folder)
+1. [The `assets` & `dist` Folders](#1-the-assets--dist-folders)
 2. [`npm`](#2-npm)
 3. [`gulp`](#3-gulp)
 4. [`elixir`](#4-elixir)
