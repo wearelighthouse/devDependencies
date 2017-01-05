@@ -19,7 +19,7 @@ All your frontend assets live in the `assets` folder regardless of if any build 
 The thinking behind this is two fold:
 
 1. You will only work in one folder instead of jumping between `dist` and `assets`
-2. You will never accidently edit files in `dist` as you are only ever working in `assets`
+2. You will never accidentally edit files in `dist` as you are only ever working in `assets`
 
 **N.B.** You should always add your dist folder to the `.gitignore`, compiled assets should never be checked in!
 
@@ -54,7 +54,7 @@ For the most part the structure of the `dist` folder will mimic the assets folde
 
 ## 2. `npm`
 
-[`npm`](https://www.npmjs.com/) is the package manager for JavaScript and pretty much any fronent `devDependecies` we need. We us it to install and manage all of our projects fronent `devDependecies`.
+[`npm`](https://www.npmjs.com/) is the package manager for JavaScript and pretty much any frontend `devDependencies` we need. We us it to install and manage all of our projects frontend `devDependencies`.
 
 You can easily install `npm` using [Homebrew](http://brew.sh/), which you should all get, with the following command:
 
@@ -62,7 +62,7 @@ You can easily install `npm` using [Homebrew](http://brew.sh/), which you should
 
 ### `package.json`
 
-Each project will have a [`package.json`](resources/package.json) file, this is what we check-in to `git` to make sure everyone has all the dependencies they need to run the project. There is an example [`package.json`](resources/package.json) in this repo that contains all the `devDependencies` that are refered to in this README.md, this can be used as a starting point for new projects.
+Each project will have a [`package.json`](resources/package.json) file, this is what we check-in to `git` to make sure everyone has all the dependencies they need to run the project. There is an example [`package.json`](resources/package.json) in this repo that contains all the `devDependencies` that are referred to in this README.md, this can be used as a starting point for new projects.
 
 ### Installing Dependencies
 
@@ -82,7 +82,7 @@ Every [`package.json`](resources/package.json) will have a [`scripts`](resources
 
 `npm run scriptname`
 
-You should check these [`scripts`](resources/package.json#L3) to find out how to build a given project as well as anyother useful tasks.
+You should check these [`scripts`](resources/package.json#L3) to find out how to build a given project as well as any other useful tasks.
 
 ## 3. `gulp`
 
@@ -117,7 +117,7 @@ This isn't very nice so normally a script will be defined in the project's [`pac
 
 `npm run build`
 
-**A Side Note**: When `npm` installs a dependency it that package has an excecutable is is place in `node_modules/.bin/`. When adding [`scripts`](resources/package.json#L3) to a [`package.json`](resources/package.json) you don't need to specify the directory path to an executable installed by `npm` as it knows to look there.
+**A Side Note**: When `npm` installs a dependency it that package has an executable is is place in `node_modules/.bin/`. When adding [`scripts`](resources/package.json#L3) to a [`package.json`](resources/package.json) you don't need to specify the directory path to an executable installed by `npm` as it knows to look there.
 
 #### Watch
 
@@ -143,7 +143,7 @@ The example [`gulpfile.js`](resources/gulpfile.js) has examples of how we use El
 
 ### `webpack`
 
-[`webpack.config.js`](resources/webpack.config.js) is used to configure `webpack` and should be palced in the root of your project. Our starting [`webpack.config.js`](resources/webpack.config.js) is specifing what the bundled output should be called and what loaders we are using. Loaders are pretty much what allow us to `require()` things in our JavaScript files.
+[`webpack.config.js`](resources/webpack.config.js) is used to configure `webpack` and should be placed in the root of your project. Our starting [`webpack.config.js`](resources/webpack.config.js) is specifing what the bundled output should be called and what loaders we are using. Loaders are pretty much what allow us to `require()` things in our JavaScript files.
 
 The following loaders are specified in our starting [`webpack.config.js`](resources/webpack.config.js):
 
