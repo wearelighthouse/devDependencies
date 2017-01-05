@@ -14,9 +14,9 @@
 
 ## 1. The Assets & Dist Folder
 
-All your frontend assets live in the `assets` folder regardless of if any build process needs to happen to them.
+All your frontend assets live in the `assets` folder regardless of whether any build process needs to happen to them.
 
-The thinking behind this is two fold:
+The thinking behind this is twofold:
 
 1. You will only work in one folder instead of jumping between `dist` and `assets`
 2. You will never accidently edit files in `dist` as you are only ever working in `assets`
@@ -48,13 +48,13 @@ dist/
 └── svg/
 ```
 
-For the most part the structure of the `dist` folder will mimic the assets folder except everything is compiled! The `dist` folder is also where you will reference all of your assets from **not** the `assets` folder.
+For the most part the structure of the `dist` folder will mimic the assets folder except everything is compiled!
 
 **N.B.** The `dist` folder should always be listed in your projects `.gitignore`.
 
 ## 2. `npm`
 
-[`npm`](https://www.npmjs.com/) is the package manager for JavaScript and pretty much any fronent `devDependecies` we need. We us it to install and manage all of our projects fronent `devDependecies`.
+[`npm`](https://www.npmjs.com/) is the package manager for JavaScript and pretty much any frontend `devDependecies` we need. We use it to install and manage all of our projects' frontend `devDependecies`.
 
 You can easily install `npm` using [Homebrew](http://brew.sh/), which you should all get, with the following command:
 
@@ -62,7 +62,7 @@ You can easily install `npm` using [Homebrew](http://brew.sh/), which you should
 
 ### `package.json`
 
-Each project will have a [`package.json`](resources/package.json) file, this is what we check-in to `git` to make sure everyone has all the dependencies they need to run the project. There is an example [`package.json`](resources/package.json) in this repo that contains all the `devDependencies` that are refered to in this README.md, this can be used as a starting point for new projects.
+Each project will have a [`package.json`](resources/package.json) file, this is what we check-in to `git` to make sure everyone has all the dependencies they need to run the project. There is an example [`package.json`](resources/package.json) in this repo that contains all the `devDependencies` that are refered to in this README.md. This can be used as a starting point for new projects.
 
 ### Installing Dependencies
 
@@ -74,7 +74,7 @@ Installing new `devDependencies` is done with the following command:
 
 `npm install --save-dev packagename`
 
-**N.B.** The difference between `dependencies` and `devDependencies` are that `devDependencies` are only used to build the project not run it. For example `gulp` is a `devDependency` where as `plyr` is a `dependency`.
+**N.B.** The difference between `dependencies` and `devDependencies` are that `devDependencies` are only used to build the project, not run it. For example `gulp` is a `devDependency` where as `plyr` is a `dependency`.
 
 ### `scripts`
 
@@ -82,7 +82,7 @@ Every [`package.json`](resources/package.json) will have a [`scripts`](resources
 
 `npm run scriptname`
 
-You should check these [`scripts`](resources/package.json#L3) to find out how to build a given project as well as anyother useful tasks.
+You should check these [`scripts`](resources/package.json#L3) to find out how to build a given project as well as any other useful tasks.
 
 ## 3. `gulp`
 
@@ -96,7 +96,7 @@ Any project that uses `gulp` will have a [`gulpfile.js`](resources/gulpfile.js),
 
 ### `.gulprc.example` & `.gulprc`
 
-`.gulprc` is used to configure gulp on a per user basis and as such should be added to the projects `.gitignore` and not checked-in. [`.gulprc.example`](resources/.gulprc.example) should be added to all projects and checked-in to be used as a template for each users `.gulprc`.
+`.gulprc` is used to configure gulp on a per user basis and as such should be added to the projects `.gitignore` and not checked-in. [`.gulprc.example`](resources/.gulprc.example) should be added to all projects and checked-in to be used as a template for each user's `.gulprc`.
 
 **N.B.** The way we have our starting [`gulpfile.js`](resources/gulpfile.js) setup means `gulp` will **not** work without a `.gulprc`.
 
