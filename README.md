@@ -7,10 +7,10 @@
 1. [Assets & Dist Folder](#1-assets-and-dist-folder)
 2. [`npm`](#2-npm)
 3. [`gulp`](#3-gulp)
-4. [Laravel Elixir](#4-laravel-elixir)
-5. [Webpack and Babel](5-webpack-and-babel)
-6. [SVG](6-svg)
-7. [Browsersync](7-browsersync)
+4. [`elixir`](#4-elixir)
+5. [`webpack` and Babel](5-webpack-and-babel)
+6. [Browsersync](6-browsersync)
+7. [SVGs](7-svgs)
 
 ## 1. Assets & Dist Folder
 
@@ -62,7 +62,7 @@ You can easily install `npm` using [Homebrew](http://brew.sh/), which you should
 
 ### `package.json`
 
-Each project will have a [`package.json`](resources/package.json) file, this is what we check in to `git` to make sure everyone has all the dependencies they need to run the project. There is an example [`package.json`](resources/package.json) in this repo that contains all the `devDependencies` that are refered to in this README.md, this can be used as a starting point for new projects.
+Each project will have a [`package.json`](resources/package.json) file, this is what we check-in to `git` to make sure everyone has all the dependencies they need to run the project. There is an example [`package.json`](resources/package.json) in this repo that contains all the `devDependencies` that are refered to in this README.md, this can be used as a starting point for new projects.
 
 ### Installing Dependencies
 
@@ -123,10 +123,47 @@ Again like above this isn't very nice so normally a script will be defined in th
 
 `npm run watch`
 
-## 4. Laravel Elixir
+## 4. `elixir`
 
-`gulp` isn't very nice to use on its own but fortunately Laravel have created a lovely wrapper for tasks called [Elixir](https://laravel.com/docs/5.0/elixir). It can be added as a `devDependency` for a given project by running the following command:
+`gulp` isn't very nice to use on its own but fortunately Laravel have created a lovely wrapper for tasks called [`elixir`](https://laravel.com/docs/5.0/elixir). It can be added as a `devDependency` for a given project by running the following command:
 
 `npm install --save-dev laravel-elixir`
 
 The example [`gulpfile.js`](resources/gulpfile.js) has examples of how we use Elixir for various tasks.
+
+## 5. `webpack` and Babel
+
+[`webpack`](https://webpack.github.io/) is a module bundler for JavaScript, it is what we use to concatenate, minify and generally magic our JavaScript into being production ready. [Babel](https://babeljs.io/) is a JavaScript compiler that allows us to write modern JavaScript ([ES6](http://es6-features.org/)) without having to worry about browser support, well not too much...
+
+### `webpack`
+
+[`webpack.config.js`](resources/webpack.config.js) is used to configure `webpack` and should be palced in the root of your project. Our starting [`webpack.config.js`](resources/webpack.config.js) is specifing what the bundled output should be called and what loaders we are using. Loaders are pretty much what allow us to `require()` things in our JavaScript files.
+
+The following loaders are specified in our starting [`webpack.config.js`](resources/webpack.config.js):
+
+* `babel-loader` - This allows us to write our files in ES6 and when it is bundled it will also be compiled
+* `style-loader` - This allows us to `require()` style sheets in our JavaScript. When this is done they are injected into the page using `<style>` tags.
+
+To add `webpack` and these loaders as `devDependencies` for a given project run the following command:
+
+`npm install --save-dev babel-core babel-loader babel-plugin-transform-object-rest-spread babel-preset-es2015 css-loader laravel-elixir-webpack-official style-loader`
+
+We are using `elixir`'s wrapper for `webpack` to run `webpack` as a task in our starting [`gulpfile.js`](resources/gulpfile.js#L70).
+
+### Babel
+
+[`.babelrc`](resources/.babelrc) is used configure Babel and should also placed in the root of your project. Our starting [`.babelrc`](resources/.babelrc) creates sourcemaps and included the [`es2015`](https://babeljs.io/docs/plugins/preset-es2015/), this is what allows us to use all the new fun functionality.
+
+## 6. Browsersync
+
+[Browsersync](https://www.browsersync.io/) is magic and all frontend developers should use it! To use Browsersync you need to install the `elixir` wrapper to your projects `devDependencies` with the following command:
+
+`npm install --save-dev laravel-elixir-browsersync-official`
+
+An example of how to configure the `browserSync` task can be found in our starting [`gulpfile.js`](resources/gulpfile.js#L95).
+
+## 7. SVGs
+
+### `svgSprite`
+
+`svgSprite` is an `elixir` task that is used to take a folder of SVGs and create a single `symbol.svg` from them. An example of how to configure the `svgSprite` task can be found in our starting [`gulpfile.js`](resources/gulpfile.js#L84).
