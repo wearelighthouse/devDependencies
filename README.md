@@ -94,6 +94,12 @@ You should check these [`scripts`](resources/package.json#L3) to find out how to
 
 Any project that uses `gulp` will have a [`gulpfile.js`](resources/gulpfile.js), this is where we define what tasks need to be run when building a project.
 
+### `.gulprc.example` & `.gulprc`
+
+`.gulprc` is used to configure gulp on a per user basis and as such should be added to the projects `.gitignore` and not checked-in. [`.gulprc.example`](resources/.gulprc.example) should be added to all projects and checked-in to be used as a template for each users `.gulprc`.
+
+**N.B.** The way we have our starting [`gulpfile.js`](resources/gulpfile.js) setup means `gulp` will **not** work without a `.gulprc`.
+
 ### Running `gulp`
 
 There are two ways to run gulp:
