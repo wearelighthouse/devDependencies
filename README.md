@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-1. [Assets & Dist Folder](#1-the-assets--dist-folder)
+1. [The `assets` & `dist` Folders](#1-the-assets--dist-folder)
 2. [`npm`](#2-npm)
 3. [`gulp`](#3-gulp)
 4. [`elixir`](#4-elixir)
@@ -12,7 +12,7 @@
 6. [Browsersync](#6-browsersync)
 7. [SVGs](#7-svgs)
 
-## 1. The Assets & Dist Folder
+## 1. The `assets` & `dist` Folders
 
 All your frontend assets live in the `assets` folder regardless of whether any build process needs to happen to them.
 
