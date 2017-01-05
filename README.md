@@ -7,7 +7,7 @@
 1. [Assets & Dist Folder](#1-assets-and-dist-folder)
 2. [`npm`](#2-npm)
 3. [`gulp`](#3-gulp)
-4. [Elixir](#4-elixir)
+4. [Laravel Elixir](#4-laravel-elixir)
 5. [Webpack and Babel](5-webpack-and-babel)
 6. [SVG](6-svg)
 7. [Browsersync](7-browsersync)
@@ -122,3 +122,11 @@ Watch keeps `gulp` running and based on the defined tasks will re-run tasks when
 Again like above this isn't very nice so normally a script will be defined in the project's [`package.json`](resources/package.json) allowing you to run `gulp watch` with the following command:
 
 `npm run watch`
+
+## 4. Laravel Elixir
+
+`gulp` isn't very nice to use on its own but fortunately Laravel have created a lovely wrapper for tasks called [Elixir](https://laravel.com/docs/5.0/elixir). It can be added as a `devDependency` for a given project by running the following command:
+
+`npm install --save-dev laravel-elixir`
+
+The example [`gulpfile.js`](resources/gulpfile.js) has examples of how we use Elixir for various tasks.
