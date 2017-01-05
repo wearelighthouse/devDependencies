@@ -8,9 +8,9 @@
 2. [`npm`](#2-npm)
 3. [`gulp`](#3-gulp)
 4. [`elixir`](#4-elixir)
-5. [`webpack` and Babel](5-webpack-and-babel)
-6. [Browsersync](6-browsersync)
-7. [SVGs](7-svgs)
+5. [`webpack` and Babel](#5-webpack-and-babel)
+6. [Browsersync](#6-browsersync)
+7. [SVGs](#7-svgs)
 
 ## 1. Assets & Dist Folder
 
