@@ -4,15 +4,15 @@
 
 ## Table of Contents
 
-1. [Assets & Dist Folder](#1-assets-and-dist-folder)
+1. [Assets & Dist Folder](#1-the-assets--dist-folder)
 2. [`npm`](#2-npm)
 3. [`gulp`](#3-gulp)
 4. [`elixir`](#4-elixir)
-5. [`webpack` and Babel](#5-webpack-and-babel)
+5. [`webpack` and Babel](#5-webpack---babel)
 6. [Browsersync](#6-browsersync)
 7. [SVGs](#7-svgs)
 
-## 1. Assets & Dist Folder
+## 1. The Assets & Dist Folder
 
 All your frontend assets live in the `assets` folder regardless of if any build process needs to happen to them.
 
@@ -131,7 +131,7 @@ Again like above this isn't very nice so normally a script will be defined in th
 
 The example [`gulpfile.js`](resources/gulpfile.js) has examples of how we use Elixir for various tasks.
 
-## 5. `webpack` and Babel
+## 5. `webpack` & Babel
 
 [`webpack`](https://webpack.github.io/) is a module bundler for JavaScript, it is what we use to concatenate, minify and generally magic our JavaScript into being production ready. [Babel](https://babeljs.io/) is a JavaScript compiler that allows us to write modern JavaScript ([ES6](http://es6-features.org/)) without having to worry about browser support, well not too much...
 
