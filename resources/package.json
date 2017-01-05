@@ -5,6 +5,7 @@
     "prod": "gulp --production",
     "watch": "gulp watch"
   },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
