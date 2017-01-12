@@ -198,4 +198,4 @@ If you're creating an SVG to use as a mask, it's likely that you're referring to
 
 ### Single-use / Unique
 
-Sometimes you'll create a large, complex SVG with built-in animation and specific ID's to attach events to (you clever clogs). As we don't need to load this _everywhere_, we store it directly in the `/svg/` folder and reference it there.
+Sometimes you'll create a large, complex SVG with built-in animation and specific ID's to attach events to (you clever clogs). As we don't need to load this _everywhere_, we store in the `/svg/single/` folder and reference it from there.
