@@ -32,6 +32,8 @@ assets/
 ├── js/
 ├── scss/
 └── svg/
+    └── mask/
+    └── single/
     └── sprite/
 ```
 
@@ -46,6 +48,9 @@ dist/
 ├── js/
 ├── css/
 └── svg/
+    └── mask/
+    └── single/
+    └── sprite.svg
 ```
 
 For the most part the structure of the `dist` folder will mimic the assets folder - except that everything is compiled! The `dist` folder is also where you will reference all of your assets from (**not** the `assets` folder).
