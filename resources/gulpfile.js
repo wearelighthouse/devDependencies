@@ -36,6 +36,21 @@ elixir.config.notifications = config.notifications;
 elixir.config.css.sass.folder = 'scss';
 elixir.config.css.sass.search = '/**/*.scss';
 
+/**
+For setting autoprefix options - leave `cascade: false` untouched.
+IE10 supports prefixed-only Flexbox!
+
+ elixir.config.css.autoprefix.options = {
+    browsers: [
+        'last 2 versions',
+        'IE 9',
+        'IE 10',
+        'IE 11',
+        ],
+    cascade: false,
+}
+**/
+
 // This is the dev url that Browsersync should proxy to localhost.
 elixir.config.browserSync.proxy = config.browserSync.proxy;
 
